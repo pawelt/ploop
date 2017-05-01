@@ -1,5 +1,5 @@
 const { expect, expectDelay } = require('./common');
-const { delayResolve, delayReject, delay } = require('../lib/prut');
+const { delayResolve, delayReject, delay } = require('../lib');
 
 
 const SLOW_THRESHOLD = 400;

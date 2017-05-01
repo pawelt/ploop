@@ -1,5 +1,5 @@
 const { expect, sinon, expectDelay } = require('./common');
-const { retry } = require('../lib/prut');
+const { retry } = require('../lib');
 
 
 const RESOLVED_SUCCESS = 'YES!';

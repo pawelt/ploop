@@ -1,5 +1,5 @@
 const { expect, sinon, expectDelayWithin } = require('./common');
-const { mapSer, mapCon, delay } = require('../lib/prut');
+const { mapSer, mapCon, delay } = require('../lib');
 
 const syncMap1 = [ 1, 2, 3, 4, 5 ];
 const asyncMap1 = [ Promise.resolve(1), Promise.resolve(2), 3, 4, Promise.resolve(5) ];

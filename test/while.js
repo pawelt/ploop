@@ -1,17 +1,17 @@
 const { expect, sinon } = require('./common');
-const { whileDo, doWhile } = require('../lib/prut');
+const { whileDo, doWhile } = require('../lib');
 
 
 describe('whileDo', function () {
 
-    it('do it!');
+    it('TODO');
 
 });
 
 
 describe('doWhile', function () {
 
-    it('do it!');
+    it('TODO');
 
 });
 
