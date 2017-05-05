@@ -1,6 +1,6 @@
 {
   "name": "ploop",
-  "version": "1.0.2",
+  "version": "2.0.2",
   "description": "Promise LOOPing utility functions",
   "repository": "https://github.com/pawelt/ploop",
   "main": "lib/index.js",
@@ -10,7 +10,6 @@
   "author": "Pawel Turlejski",
   "license": "MIT",
   "dependencies": {
-    "bluebird": "^3.5.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
