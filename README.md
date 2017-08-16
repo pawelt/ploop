@@ -11,7 +11,7 @@ Promise LOOPing utility functions.
 
 ```js
 /**
- * retry
+ * Retry
  * 
  * `opts` has to be a number or an options object with fields:
  * - {number}           limit       - maximum number of retries
@@ -30,26 +30,26 @@ function retry(opts, action, initialResult)
 
 ```js
 /**
- * Map concurrently.
+ * Map concurrently
  * 
  * @param {array} collection
  * @param {function} mapper 
  * @param {boolean} [breakEarly = false]
  * @param {number} [concurrency = Infinite]
  */
-function mapCon(collection, mapper, breakEarly = false, concurrency = 1234567890)
+function map(collection, mapper, breakEarly = false, concurrency = 1234567890)
 ```
 
 
 ```js
 /**
- * Map serially.
+ * Map serially
  * 
  * @param {array} collection 
  * @param {function} mapper 
  * @param {boolean} [breakEarly = false] 
  */
-function mapSer(collection, mapper, breakEarly = false)
+function map(collection, mapper, breakEarly = false, concurrency = 1)
 ```
 
 
