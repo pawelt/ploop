@@ -1,4 +1,4 @@
-const { expect, expectDelay } = require('./common');
+const { expect, expectDelay, slow } = require('./common');
 const { delayResolve, delayReject, delay } = require('../lib');
 
 
@@ -8,7 +8,7 @@ const MILLIS = 100;
 
 describe('delay', function () {
 
-    this.slow(SLOW_THRESHOLD);
+    slow(this, SLOW_THRESHOLD);
 
     it('should resolve to a specified value after N milliseconds', () => {
         const p = delay(MILLIS, 123);
@@ -20,7 +20,7 @@ describe('delay', function () {
 
 describe('delayResolve', function () {
 
-    this.slow(SLOW_THRESHOLD);
+    slow(this, SLOW_THRESHOLD);
 
     it('should return a function that resolves after N milliseconds', () => {
         const p = delayResolve(MILLIS)();
@@ -38,7 +38,7 @@ describe('delayResolve', function () {
 
 describe('delayReject', function () {
 
-    this.slow(SLOW_THRESHOLD);
+    slow(this, SLOW_THRESHOLD);
 
     it('should return a function that rejects after N milliseconds', () => {
         const p = delayReject(MILLIS)();

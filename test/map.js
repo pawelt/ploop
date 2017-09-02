@@ -1,4 +1,4 @@
-const { expect, expectDelay, expectDelayWithin } = require('./common');
+const { expect, expectDelay, expectDelayWithin, slow, timeout } = require('./common');
 const { map, delay } = require('../lib');
 
 const syncMap1 = [ 1, 2, 3, 4, 5 ];
@@ -18,7 +18,7 @@ const slowRandomFailingMapper = (v, i, m) => delay(100).then(_ => i != 1 ? v * 2
 
 describe('map - serial', function () {
 
-    this.slow(200);
+    slow(this, 200);
 
     it('should map values serially with synchronous mapper', () => {
         return expect(map(syncMap1, syncMapper))
@@ -52,8 +52,8 @@ describe('map - serial', function () {
 
 describe('map - concurrent', function () {
 
-    this.slow(500);
-    this.timeout(10000);
+    slow(this, 500);
+    timeout(this, 10000);
 
     it('should map all values concurrently', () => {
         return expect(map(asyncMap1, slowAsyncMapper, false, 123456789))

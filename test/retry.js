@@ -1,4 +1,4 @@
-const { expect, sinon, expectDelay } = require('./common');
+const { expect, sinon, expectDelay, slow } = require('./common');
 const { retry } = require('../lib');
 
 
@@ -31,7 +31,7 @@ describe('retry', function () {
     });
 
     it('should call before and after functions', function () {
-        this.slow(500);
+        slow(this, 500);
         const opts = { backoff: 100, before: trueNTimes(10), after: trueNTimes(10) };
         return expect(retry(opts, resolveOnThirdCall))
             .to.eventually.be.fulfilled
