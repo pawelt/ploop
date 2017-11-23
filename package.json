@@ -1,6 +1,6 @@
 {
   "name": "ploop",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "Promise LOOPing utility functions",
   "repository": "https://github.com/pawelt/ploop",
   "main": "lib/index.js",
